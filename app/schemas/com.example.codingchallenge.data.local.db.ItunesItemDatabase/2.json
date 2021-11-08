@@ -1,0 +1,136 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "ec8dfe85505114d077cf4c2470f657f3",
+    "entities": [
+      {
+        "tableName": "itunes_item_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wrapperType` TEXT, `releasedDate` TEXT, `kind` TEXT, `contentAdvisoryRating` TEXT, `primaryGenreName` TEXT, `trackPrice` TEXT, `currency` TEXT, `trackName` TEXT, `artistName` TEXT, `collectionName` TEXT, `censoredName` TEXT, `artworkUrl100` TEXT, `artworkUrl60` TEXT, `artworkUrl30` TEXT, `collectionExplicitness` TEXT, `trackExplicitness` TEXT, `explicitness` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "itunesBasicInfo.wrapperType",
+            "columnName": "wrapperType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.releasedDate",
+            "columnName": "releasedDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.contentAdvisoryRating",
+            "columnName": "contentAdvisoryRating",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.primaryGenreName",
+            "columnName": "primaryGenreName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.trackPrice",
+            "columnName": "trackPrice",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesBasicInfo.currency",
+            "columnName": "currency",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesNameInfo.trackName",
+            "columnName": "trackName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesNameInfo.artistName",
+            "columnName": "artistName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesNameInfo.collectionName",
+            "columnName": "collectionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesNameInfo.censoredName",
+            "columnName": "censoredName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "artwork.artworkUrl100",
+            "columnName": "artworkUrl100",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "artwork.artworkUrl60",
+            "columnName": "artworkUrl60",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "artwork.artworkUrl30",
+            "columnName": "artworkUrl30",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesExplicitnessType.collectionExplicitness",
+            "columnName": "collectionExplicitness",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesExplicitnessType.trackExplicitness",
+            "columnName": "trackExplicitness",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itunesExplicitnessType.explicitness",
+            "columnName": "explicitness",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ec8dfe85505114d077cf4c2470f657f3')"
+    ]
+  }
+}

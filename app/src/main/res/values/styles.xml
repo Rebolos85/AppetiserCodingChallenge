@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">#F6F6F6</item>
+        <item name="colorPrimaryDark">@color/color_accent</item>
+        <item name="android:navigationBarColor">@color/color_accent</item>
+    </style>
+    
+    <style name="CustomAlbumCoverStyle" parent="AppTheme">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+</resources>
