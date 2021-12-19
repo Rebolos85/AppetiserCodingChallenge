@@ -71,5 +71,7 @@ common - responsible for defining what are the common extension function in our 
   - https://medium.com/swlh/repository-pattern-in-android-c31d0268118c
   - https://www.tutorialspoint.com/mvvm/mvvm_advantages.htm
  
+Authors and Acknowledgment This is for Appetiser Apps submission purposes only.
 
+Roberto A Rebolos Jr
 
