@@ -34,21 +34,33 @@ Project Architecture
 This app uses the MVVM architecture as recommended by Google with repository pattern and usecase to handle the domain layer
 
  adapter- data source in order to populate the recycle view
+ 
  base - these are the common base classes to all child clases which I believe it will help us to reduce the boiler plate and to follow the SOLID Principle by   defining  what are the common methods and fields for the subclasses
- common - responsible for defining what are the common extension function in our views of the app
+ 
+common - responsible for defining what are the common extension function in our views of the app
+ 
  data - constains repository which it has data source coming from local and remote source
+ 
  di - defining all the depedencies that are needed for consumer classes to make the app testable and maintanable
+ 
  domain - constains a domain model which is the data source to update our UI 
+ 
  ext- constains an extension function 
+ 
  features- constains the view model, activities and sealed classes
+ 
  local- data source for local and it constains dao, db,and Music Local Entity Model
+ 
  network - data source for remote which it constains the api and request model and base responses
+ 
  usecases - for business logic of the app in order that the viewmodel will not be bloated 
+ 
  utils- constains base scheduler interface to easily call this interface to the consumer classes and also it constains
  mapper interface to map the dto to cache model and lastly to the domain model
  
- what are the benefits of this architecture?
- -separation of concerns- each layer has it's has only specific job that it does not interfere the other layers.
+ What are the benefits of this architecture? It has the following benefits below are:
+
+ -separation of concerns- each layer has it's only specific job that it does not interfere with the other layers.
 
  -Repository Pattern- to abstract multiple data source, whether it maybe local cache or from a network fetch by using mapper interface
   to map the dto to cache model and also to help map the cache data to domain model
@@ -59,3 +71,5 @@ This app uses the MVVM architecture as recommended by Google with repository pat
   - https://medium.com/swlh/repository-pattern-in-android-c31d0268118c
   - https://www.tutorialspoint.com/mvvm/mvvm_advantages.htm
  
+
+
