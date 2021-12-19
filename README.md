@@ -32,9 +32,9 @@ be really hard to debug.
 Project Architecture
 
 This app uses the MVVM architecture as recommended by Google with repository pattern and usecase to handle the domain layer
-adapter- data source in order to populate the recycle view
- base - these are the common base classes to all child clases which I believe it will help us to reduce the boiler plate and to follow the SOLID Principle by defining
- what are the common methods and fields for the subclasses
+
+ adapter- data source in order to populate the recycle view
+ base - these are the common base classes to all child clases which I believe it will help us to reduce the boiler plate and to follow the SOLID Principle by   defining  what are the common methods and fields for the subclasses
  common - responsible for defining what are the common extension function in our views of the app
  data - constains repository which it has data source coming from local and remote source
  di - defining all the depedencies that are needed for consumer classes to make the app testable and maintanable
