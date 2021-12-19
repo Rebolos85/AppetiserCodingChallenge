@@ -6,12 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/tools"
-
-
     android:background="@color/color_accent"
     android:padding="5dp"
-    tools:context="com.example.codingchallenge.view.activity.DetailsActivity">
+    tools:context="com.example.codingchallenge.features.description.ItunesSingleDescriptionActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal_25"
@@ -52,8 +49,9 @@
         app:layout_constraintTop_toTopOf="@id/guideline_horizontal_25">
 
         <ImageView
-            android:id="@+id/albumCover"
+            android:id="@+id/artwork"
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
             android:layout_height="match_parent"
             android:adjustViewBounds="true" />
 

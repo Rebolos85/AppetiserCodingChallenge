@@ -5,6 +5,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import javax.inject.Inject
+import javax.inject.Named
 
 /**
  * This class is responsible to load the image using glide

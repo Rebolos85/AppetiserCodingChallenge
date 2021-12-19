@@ -1,10 +1,16 @@
 package com.example.codingchallenge.use_case
 
-import com.example.codingchallenge.data.remote.repository.ItunesRepository
+
+import com.example.codingchallenge.data.features.music.MusicRepository
+import com.example.codingchallenge.local.features.music.model.MusicLocalEntity
+import io.reactivex.Single
+
 import javax.inject.Inject
 
 
-class GetItunesItemDataUseCase @Inject constructor(private val trackRepository: ItunesRepository) {
-     // this class is responsible to get all topic data
-     fun getAllItemsInItunes() = trackRepository.getAllTopicData()
+class GetItunesItemDataUseCase @Inject constructor(private val trackRepository: MusicRepository) {
+
+    fun getAllItunesMusic(): Single<List<MusicLocalEntity>> =trackRepository.getAllMusicItemsStoredInDb()
+
+
 }

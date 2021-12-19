@@ -1,110 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-    android:layout_height="210dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools">
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_vertical_40"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_horizontal_20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_horizontal_80"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/infoCardView"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/image_card_view"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:translationZ="3dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_80"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_10">
+
+        <ImageView
+            android:id="@+id/artwork"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="30dp"
-            android:translationZ="1dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:translationZ="3dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toStartOf="@id/guideline_vertical_40"
-            app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/albumCover"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+    </com.google.android.material.card.MaterialCardView>
 
-        </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/trackNameText"
+        android:layout_width="139dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/abhaya_libre_medium"
+        android:gravity="center_horizontal"
+        android:maxLines="3"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_80"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@+id/image_card_view"
+        tool:text="Star Wars: A New Hope" />
 
-        <TextView
-            android:id="@+id/trackNameText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+    <TextView
+        android:id="@+id/trackGenreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/abhaya_libre_medium"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/trackNameText"
+        app:layout_constraintStart_toStartOf="@+id/trackNameText"
+        app:layout_constraintTop_toBottomOf="@id/trackNameText"
+        tool:text="Action Adventure" />
 
-            android:maxLines="3"
-            android:textColor="@android:color/black"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/abhaya_libre_medium"
-            android:translationZ="5dp"
-            app:layout_constraintEnd_toEndOf="@id/infoCardView"
-            app:layout_constraintStart_toStartOf="@id/guideline_vertical_40"
-            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_20"
-            tool:text="Star Wars: A New Hope" />
-
-        <TextView
-            android:id="@+id/trackGenreText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/abhaya_libre_medium"
-            android:textColor="@android:color/black"
-            android:textSize="16dp"
-            android:translationZ="5dp"
-            app:layout_constraintEnd_toEndOf="@id/infoCardView"
-            app:layout_constraintStart_toStartOf="@id/guideline_vertical_40"
-            app:layout_constraintTop_toBottomOf="@id/trackNameText"
-            tool:text="Action Adventure" />
-
-        <TextView
-            android:id="@+id/trackPriceText"
-            android:layout_width="0dp"
-
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:textColor="@android:color/black"
-            android:textSize="16dp"
-            android:translationZ="5dp"
-            app:layout_constraintEnd_toEndOf="@id/infoCardView"
-            app:layout_constraintStart_toStartOf="@id/guideline_vertical_40"
-            app:layout_constraintTop_toBottomOf="@id/trackGenreText" />
-
+    <TextView
+        android:id="@+id/trackPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/trackGenreText"
+        app:layout_constraintStart_toStartOf="@+id/trackGenreText"
+        app:layout_constraintTop_toBottomOf="@+id/trackGenreText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

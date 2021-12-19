@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:name=".ItunesApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -14,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.activity.DetailsActivity"
-            android:screenOrientation="portrait" />
+            android:name=".features.description.ItunesSingleDescriptionActivity"
+            android:screenOrientation="fullSensor" />
         <activity
-            android:name=".view.activity.ItunesDetailsActivity"
+            android:name=".features.listofmusic.ListOfMusicItunesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
